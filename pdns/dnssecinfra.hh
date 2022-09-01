@@ -192,6 +192,7 @@ DSRecordContent makeDSFromDNSKey(const DNSName& qname, const DNSKEYRecordContent
 
 class DNSSECKeeper;
 
+uint32_t getCurrentTime();
 uint32_t getStartOfWeek();
 
 string hashQNameWithSalt(const NSEC3PARAMRecordContent& ns3prc, const DNSName& qname);

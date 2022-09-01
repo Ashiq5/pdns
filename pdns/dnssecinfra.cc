@@ -516,6 +516,15 @@ static DNSKEYRecordContent makeDNSKEYFromDNSCryptoKeyEngine(const std::shared_pt
   return drc;
 }
 
+
+uint32_t getCurrentTime()
+{
+  uint32_t now = time(nullptr);
+  now -= (now % (10*60));
+  return now;
+}
+
+
 uint32_t getStartOfWeek()
 {
   uint32_t now = time(nullptr);
